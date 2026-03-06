@@ -7,7 +7,9 @@ export default async function SubHero() {
 
   const data = await client.fetch(section2Query);
 
-  if (!data) return null;
+  if (!data) {
+    return <div className="text-center py-20">Loading...</div>;
+  }
 
   return (
     <section className="relative w-full py-5 px-6 md:px-20">

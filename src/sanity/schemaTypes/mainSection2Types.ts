@@ -8,6 +8,13 @@ export const mainSection2Types = defineType({
   fields: [
 
     defineField({
+      name: "previewTitle",
+      title: "Preview Name (for Admin List)",
+      type: "string",
+      description: "This name will appear in the Sanity dashboard list",
+    }),
+
+    defineField({
       name: "backgroundImage",
       title: "Background Image",
       type: "image",
@@ -106,4 +113,11 @@ export const mainSection2Types = defineType({
     }),
 
   ],
+
+  preview: {
+    select: {
+      title: "previewTitle",
+    },
+  },
+  
 });

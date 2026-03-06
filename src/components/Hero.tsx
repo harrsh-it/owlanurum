@@ -98,7 +98,7 @@ export default async function Hero() {
   const data = await client.fetch(heroQuery);
 
    if (!data) {
-    return <div className="text-center py-20">No Hero Data Found</div>;
+    return <div className="text-center py-20">Loading...</div>;
   }
 
   return (
