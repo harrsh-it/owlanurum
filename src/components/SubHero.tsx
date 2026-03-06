@@ -63,40 +63,83 @@ export default async function SubHero() {
 
       </div>
 
-      {/* Products */}
-      <div className="grid md:grid-cols-3 gap-12 text-center">
-
-        {data.products?.map((product: any, index: number) => (
-          <div key={index} className="flex flex-col items-center">
-
-            <h4 className="text-sm tracking-widest font-bold text-[#5b4a3b]">
-              {product.name}
+       <div className="grid md:grid-cols-3 gap-12 text-center">
+        {/* Product 1 */}
+        <div className="flex flex-row">
+          <div>
+            <h4 className="text-sm tracking-widest font-bold text-[#5b4a3b] ">
+              {data.product1Title}
             </h4>
 
-            <p className="text-sm text-[#6d5c4c] mb-4">
-              {product.description}
+            <h1 className="border-b-2 border-[#c8a46b] mb-2 w-10 mt-1 mx-auto"></h1>
+
+            <p className="text-sm text-[#6d5c4c] font-semibold mb-6">
+              {data.product1Description}
             </p>
 
-            {product.image && (
-              <Image
-                src={urlFor(product.image).url()}
-                alt={product.name}
-                width={150}
-                height={120}
-                className="object-contain"
-              />
-            )}
-
-            {product.buttonText && (
-              <a href={product.buttonLink}>
-                <button className="bg-[#c89a53] text-white px-6 py-2 text-sm tracking-widest mt-4">
-                  {product.buttonText}
-                </button>
-              </a>
-            )}
-
+            <button className="bg-[#c89a53] text-white px-6 py-2 text-sm tracking-widest mb-6">
+              {data.product1ButtonText}
+            </button>
           </div>
-        ))}
+
+          <div className="flex justify-center h-50">
+            <Image
+              src={urlFor(data.product1Image).url()}
+              alt="product"
+              width={170}
+              height={100}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Product 2 */}
+        <div>
+          <h4 className="text-sm tracking-widest text-[#5b4a3b] mb-2">
+            {data.product2Title}
+          </h4>
+
+          <p className="text-sm text-[#6d5c4c] mb-6">
+            {data.product2Description}
+          </p>
+
+          <div className="flex justify-center h-32 ">
+            <Image
+              src={urlFor(data.product2Image).url()}
+              alt="product"
+              width={120}
+              height={100}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Product 3 */}
+        <div className="flex flex-row h-50">
+          <div className="flex justify-center ml-2">
+            <Image
+              src={urlFor(data.product3Image).url()}
+              alt="product"
+              width={170}
+              height={100}
+              className="object-contain"
+            />
+          </div>
+
+          <div>
+            <h4 className="text-sm tracking-widest text-[#5b4a3b] mb-2">
+              {data.product3Title}
+            </h4>
+
+            <p className="text-sm text-[#6d5c4c] mb-6">
+              {data.product3Description}
+            </p>
+
+            <button className="bg-[#c89a53] text-white px-6 py-2 text-sm tracking-widest mb-6">
+              {data.product3ButtonText}
+            </button>
+          </div>
+        </div>
 
       </div>
 
