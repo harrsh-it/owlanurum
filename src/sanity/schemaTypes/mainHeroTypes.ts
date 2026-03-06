@@ -54,6 +54,12 @@ export const mainHeroTypes = defineType({
       title: "Button Link",
       type: "string",
     }),
-
   ],
+  preview: {
+    select: {
+      title: "heading",
+      subtitle: "tagline",
+      media: "productImage",
+    },
+  },
 });
