@@ -22,12 +22,18 @@ export const section2Query = groq`
     buttonText,
     buttonLink
   },
-  products[]{
-    name,
-    description,
-    image,
-    buttonText,
-    buttonLink
-  }
+  product1Title,
+  product1Description,
+  product1ButtonText,
+  product1Image,
+
+  product2Title,
+  product2Description,
+  product2Image,
+
+  product3Title,
+  product3Description,
+  product3ButtonText,
+  product3Image
 }
 `;
