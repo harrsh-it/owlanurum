@@ -95,7 +95,7 @@ import { urlFor } from "@/sanity/lib/image";
 
 export default async function Hero() {
 
-  const data = await client.fetch(heroQuery, {}, { cache: "no-store" });
+  const data = await client.fetch(heroQuery);
 
    if (!data) {
     return <div className="text-center py-20">Loading...</div>;
