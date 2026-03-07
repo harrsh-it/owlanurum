@@ -5,7 +5,7 @@ import { urlFor } from "@/sanity/lib/image";
 
 export default async function SubHero() {
 
-  const data = await client.fetch(section2Query);
+  const data = await client.fetch(section2Query, {}, { cache: "no-store" });
 
   if (!data) {
     return <div className="text-center py-20">Loading...</div>;
